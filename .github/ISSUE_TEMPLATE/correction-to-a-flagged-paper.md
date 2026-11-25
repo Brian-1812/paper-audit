@@ -5,8 +5,7 @@ title: "Correction: F__ (PMC_______)"
 labels: correction
 ---
 
-Thank you. Every finding in this repository is automated. No human has verified it, it is in the process of
-verification, and it is not a claim that your paper is wrong. Your correction is part of the verification.
+Thank you. The findings are automated and unverified, and your correction is part of their verification.
 
 **Finding number in FINDINGS.md** (for example F07 or N3):
 

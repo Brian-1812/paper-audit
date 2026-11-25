@@ -1,64 +1,21 @@
 # paper-audit
 
-> **Read this first. Every finding in this repository is automated, and NO human has verified any of them.**
-> The findings are in the process of verification. They are **not** claims that any paper is wrong, and they do **not** suggest misconduct.
-> Each one is a possible discrepancy that a language-model pipeline flagged for checking. If it flags your paper, see [If this flags your paper](#if-this-flags-your-paper).
+A swarm of language-model agents that audits the statistics in published papers. It recomputes p values,
+percentages, degrees of freedom and effect sizes from each paper's own numbers, and flags the places where they do not
+seem to agree.
 
-A research tool that reads published papers and looks for **possible internal discrepancies**: a p value that does
-not seem to follow from its own test statistic, a percentage that does not seem to match its own counts, a sentence
-that does not seem to agree with the paper's own table. Language models do the reading. Code in a sandbox does every
-calculation. The output is a list of **possible discrepancies, flagged for checking**. It is not a verdict about any
-paper or any author. Full disclaimer: [`DISCLAIMER.md`](DISCLAIMER.md).
+> The findings are automated and not yet verified by a human.
+> [`DISCLAIMER.md`](DISCLAIMER.md) explains what this means and how to send a correction.
 
-We ran it once on 500 open-access papers from 2025-26 in five applied fields: ecology and environment;
-agriculture, food and veterinary science; sports and exercise science; nursing and public health; and wet-lab
-biology. This repository holds the code, the prompts, the method, the list of papers, our aggregate results, and
-**[`FINDINGS.md`](FINDINGS.md): 40 findings in 36 papers, with their evidence** (33 that our own second automated pass
-confirmed, and 7 that it did not confirm, in a separate section). It holds no full paper text. The section "Data" says why.
+Language models do the reading. Code in a no-network sandbox does every calculation. A program accepts a finding only
+when its quote is word for word in the paper and its numbers were printed by a logged sandbox run.
 
-## Why we publish unverified findings
-
-Keeping the findings private helps nobody check them. We publish them so that authors and readers can check them,
-and tell us where the tool is wrong. Each correction goes back into the tool as context, and we re-run the check.
-That loop is part of the verification. So we say clearly, everywhere: these findings are **not verified**, and we
-do **not** claim that they are correct.
-
-## If this flags your paper
-
-**What we did.** Software read the open-access text of your paper from PubMed Central. Language models extracted
-numbers and statements. Code in a sandbox recomputed statistics from your paper's own numbers. A second model, which
-did not see the first claim, checked the same place again. Every step was automatic.
-
-**What we did not do.** No human read your paper for this project. The tool did not see figures, supplements or raw
-data. We did not contact you before we published this list. We do not claim that your paper is wrong, and we do not
-suggest misconduct. A model can misread a design, a unit, a test or a sentence.
-
-**How to tell us we are wrong.**
-- Open an issue in this repository with the template "Correction to a flagged paper". Give the finding number (for
-  example F07) and your explanation.
-- Or write to the maintainer, Shohruh Toirov. The contact details are on the GitHub profile
-  [github.com/Brian-1812](https://github.com/Brian-1812).
-
-**What we promise.** We will re-run the check with your context. Then we will correct or withdraw the finding in
-public: we change its entry in `FINDINGS.md`, add a line to "Corrections and withdrawals" with the date and the
-reason, and answer in the issue. A withdrawn finding stays visible as "withdrawn", with the reason, so that the
-record is honest.
-
-## The honest result, first
-
-- The run logged **542 possible discrepancies in 261 of the 500 papers** (after merging claims about the same issue). A model judge put 197 of them in tier A
-  (in its reading, it changes a reported result) and 345 in tier B (in its reading, a possible small slip that changes no result).
-- **No human has checked any of these findings.** Every label in this repository comes from a model.
-- `FINDINGS.md` publishes the 40 findings of the strict sample (below) with their evidence: 33 confirmed by the
-  second pass, 7 not confirmed. The other records of the run are not published: no second pass checked them.
-- A second, stricter model pass re-checked a random sample of 40 tier-A findings. It saw the paper and the place,
-  but not the claim. It reproduced **33 of 40** (82.5%, 95% CI 67-93%). On 20 random statistical sentences with no
-  known finding, it flagged 1 (5%). So the pass does not confirm whatever it is pointed at. But two models of the
-  same family can share a blind spot, so 33 of 40 is model agreement. It is not a measured precision.
-- In a 100-paper pilot, the swarm design was **more precise** than a fixed two-pass pipeline at the same budget
-  (66% vs 44% of claims judged real). It **did not find more possible discrepancies** than a cheap fixed pipeline with a small
-  model, which found the most at the lowest cost of the model arms. The swarm is a design that works. It is not a proven win.
-- This is a pilot. It is not an error rate for any field, journal or publisher.
+We ran it on 500 open-access papers from 2025-26 in five applied fields: ecology and environment; agriculture, food
+and veterinary science; sports and exercise science; nursing and public health; and wet-lab biology. The run cost $192
+at list price and logged 542 possible discrepancies in 261 papers. A stricter second model pass, which saw the place
+but not the claim, reproduced 33 of 40 random tier-A findings. [`FINDINGS.md`](FINDINGS.md) lists those 40 findings,
+in 36 papers, with their evidence. This repository holds the code, the prompts, the method, the paper list and the
+aggregate results. It holds no full paper text; the section "Data" says why.
 
 ## How it works
 
@@ -100,7 +57,18 @@ them only on the same 40 findings, so they are not yet measured on new papers. D
 
 ## Results
 
-All numbers and their limits are in `docs/results.md`. Short form:
+- The run logged **542 possible discrepancies in 261 of the 500 papers** (after merging claims about the same issue). A model judge put 197 of them in tier A
+  (in its reading, it changes a reported result) and 345 in tier B (in its reading, a possible small slip that changes no result).
+- `FINDINGS.md` publishes the 40 findings of the strict sample (below) with their evidence: 33 confirmed by the
+  second pass, 7 not confirmed. The other records of the run are not published: no second pass checked them.
+- A second, stricter model pass re-checked a random sample of 40 tier-A findings. It saw the paper and the place,
+  but not the claim. It reproduced **33 of 40** (82.5%, 95% CI 67-93%). On 20 random statistical sentences with no
+  known finding, it flagged 1 (5%). So the pass does not confirm whatever it is pointed at. But two models of the
+  same family can share a blind spot, so 33 of 40 is model agreement. It is not a measured precision.
+- In a 100-paper pilot, the swarm design was **more precise** than a fixed two-pass pipeline at the same budget
+  (66% vs 44% of claims judged real). It **did not find more possible discrepancies** than a cheap fixed pipeline with a small
+  model, which found the most at the lowest cost of the model arms. The swarm is a design that works. It is not a proven win.
+- This is a pilot. It is not an error rate for any field, journal or publisher.
 
 | item | value |
 |---|---|
@@ -111,52 +79,9 @@ All numbers and their limits are in `docs/results.md`. Short form:
 | types of the 542 | text against table 226, p value 107, claim against result 105, effect size or interval 57, df or sample size 36, other 8, GRIM 3 |
 | strict blind pass on 40 random tier-A findings | 33 confirmed, 3 rejected, 4 unresolved |
 | control: 20 random sentences with no known finding | 1 flagged |
-| list-price cost of the run | $192 ($0.355 per real finding) |
+| list-price cost of the run | $192 ($0.355 per finding in the register) |
 
-## What it cannot do
-
-- It cannot tell you that a paper is wrong. It tells you where a number does not follow from the paper's own
-  numbers, and a human must check each case.
-- It reads only what is in the text and tables. It does not see figures, supplements or raw data.
-- It does not find problems that are consistent inside the paper, such as a poor choice of method or model, or bad data.
-- It cannot say how many discrepancies it missed. We have no recall number for this run.
-
-## LIMITATIONS
-
-- **No human checked any finding.** All labels come from models: the explorers, the judge, the verifier and the
-  matcher. The strict pass is model against model.
-- **The strict pass is not fully blind.** It gets the place of the finding, which is a strong hint.
-- **Small samples.** 40 findings in the strict pass give wide intervals (about plus or minus 13 points). 20
-  control sentences give a 95% interval of 0.1% to 25% for the flag rate.
-- **Some confirmations are weak.** For 9 of the 33, the sandbox code only compares two sentences or a value with a
-  threshold. Only 24 of 40 were confirmed by a real recomputation.
-- **"Tier A" is a model's reading.** Whether a discrepancy changes a result is the model's judgment. No code proves it.
-- **The sample is narrow.** 500 papers from 20 large open-access journals, about two thirds of them from two publishers.
-  The results are not an error rate for any field.
-- **The judge was lenient in known ways.** It accepted premises that the paper does not state (SD or SE, the unit
-  of analysis), counted one issue twice as two symptoms, and gave tier A to slips that change no result. The v2
-  judge fixes these, but we tested it only on the same 40 findings.
-- **The scheduler is biased.** It gave many more cells to "text against table" than to p-value recomputation, and
-  2,650 of the 3,531 cells were never explored within the budget.
-- **One run, no repeats.** A re-run of the same judge moved about 7 of 29 good findings by itself.
-- **The method is not new.** The design follows Casey Handmer's "Physics, audited". See "Credits".
-
-## Data: what is here and what is not
-
-We processed other people's papers. The papers are open access, but their licences differ: of the 500, 418 are
-CC BY 4.0, 75 are CC BY-NC-ND 4.0 and 7 are CC BY-NC 4.0. So:
-
-- **Here:** `selection/papers.tsv` (PMCID, DOI, journal, year, field and our two test counts per paper), our own
-  code, prompts, method and aggregate results.
-- **Here, as short quotations:** for each of the 40 findings in `FINDINGS.md`, the short passages of the paper that
-  the finding rests on. Each quotation is under 40 words, marked as a quotation, and comes with the paper's
-  identifier, a link and its licence. The quoted words belong to the authors and stay under the paper's own licence.
-- **Not here:** paper full text, figures, abstracts, any longer passage and the cached XML. Each paper is open access in PMC
-  under its PMCID. No script here rebuilds our exact 500-paper set from `papers.tsv`: `select_papers.py` runs a new
-  search, which finds newer papers. To audit the same papers, fetch each PMCID's JATS XML from NCBI efetch
-  (`db=pmc`) and write `data/<run>/list.tsv`, `key.json` and `papers/<id>/paper.txt` in the format that
-  `select_papers.py finalize` writes.
-- **Not here:** the other per-paper records of the run (542 in total). No second pass checked them.
+All numbers and their limits are in `docs/results.md`.
 
 ## Run it
 
@@ -205,6 +130,48 @@ python3 -I swarm/register_v2.py data/run1 runs/run1 data/register-v2   # again, 
 
 Costs: our 500-paper run was $192 at list price for the explorers and the judge, and the strict pass was about
 $0.21 per finding. Model output varies from run to run, so a re-run gives different findings.
+
+## Limitations
+
+- It cannot tell you that a paper is wrong. It tells you where a number does not follow from the paper's own
+  numbers, and a human must check each case.
+- It reads only what is in the text and tables. It does not see figures, supplements or raw data.
+- It does not find problems that are consistent inside the paper, such as a poor choice of method or model, or bad data.
+- It cannot say how many discrepancies it missed. We have no recall number for this run.
+- **No human checked any finding.** All labels come from models: the explorers, the judge, the verifier and the
+  matcher. The strict pass is model against model.
+- **The strict pass is not fully blind.** It gets the place of the finding, which is a strong hint.
+- **Small samples.** 40 findings in the strict pass give wide intervals (about plus or minus 13 points). 20
+  control sentences give a 95% interval of 0.1% to 25% for the flag rate.
+- **Some confirmations are weak.** For 9 of the 33, the sandbox code only compares two sentences or a value with a
+  threshold. Only 24 of 40 were confirmed by a real recomputation.
+- **"Tier A" is a model's reading.** Whether a discrepancy changes a result is the model's judgment. No code proves it.
+- **The sample is narrow.** 500 papers from 20 large open-access journals, about two thirds of them from two publishers.
+  The results are not an error rate for any field.
+- **The judge was lenient in known ways.** It accepted premises that the paper does not state (SD or SE, the unit
+  of analysis), counted one issue twice as two symptoms, and gave tier A to slips that change no result. The v2
+  judge fixes these, but we tested it only on the same 40 findings.
+- **The scheduler is biased.** It gave many more cells to "text against table" than to p-value recomputation, and
+  2,650 of the 3,531 cells were never explored within the budget.
+- **One run, no repeats.** A re-run of the same judge moved about 7 of 29 good findings by itself.
+- **The method is not new.** The design follows Casey Handmer's "Physics, audited". See "Credits".
+
+## Data: what is here and what is not
+
+We processed other people's papers. The papers are open access, but their licences differ: of the 500, 418 are
+CC BY 4.0, 75 are CC BY-NC-ND 4.0 and 7 are CC BY-NC 4.0. So:
+
+- **Here:** `selection/papers.tsv` (PMCID, DOI, journal, year, field and our two test counts per paper), our own
+  code, prompts, method and aggregate results.
+- **Here, as short quotations:** for each of the 40 findings in `FINDINGS.md`, the short passages of the paper that
+  the finding rests on. Each quotation is under 40 words, marked as a quotation, and comes with the paper's
+  identifier, a link and its licence. The quoted words belong to the authors and stay under the paper's own licence.
+- **Not here:** paper full text, figures, abstracts, any longer passage and the cached XML. Each paper is open access in PMC
+  under its PMCID. No script here rebuilds our exact 500-paper set from `papers.tsv`: `select_papers.py` runs a new
+  search, which finds newer papers. To audit the same papers, fetch each PMCID's JATS XML from NCBI efetch
+  (`db=pmc`) and write `data/<run>/list.tsv`, `key.json` and `papers/<id>/paper.txt` in the format that
+  `select_papers.py finalize` writes.
+- **Not here:** the other per-paper records of the run (542 in total). No second pass checked them.
 
 ## Credits and related work
 

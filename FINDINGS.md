@@ -1,14 +1,8 @@
-# Findings - automated, NOT verified by any human
+# Findings
 
-> **Read this first.** Everything in this file comes from software that uses language models.
-> **No human has verified any of these findings.** They are in the process of verification.
-> A finding here is a **possible discrepancy that was flagged for checking**. It is **not** a claim that a paper is wrong,
-> and it does **not** suggest misconduct by any author. The model can misread a paper; the paper can be right.
-> If this file flags your paper, see [If this flags your paper](#if-this-flags-your-paper). We will re-check it with your context
-> and correct or withdraw the finding in public.
+> These findings are automated and not yet verified by a human. Read [`DISCLAIMER.md`](DISCLAIMER.md) before you use them.
 
 Date of this list: 2026-11-25. Run: one run over 500 open-access papers (see `docs/results.md`).
-Full disclaimer: [`DISCLAIMER.md`](DISCLAIMER.md).
 
 ## What is in this file
 
@@ -54,21 +48,21 @@ and we mark the entry itself.
 
 ## If this flags your paper
 
-See the section of the same name in [`README.md`](README.md#if-this-flags-your-paper). In short: open an issue in
-this repository (template "Correction to a flagged paper"), or write to the maintainer. We will re-run the check
-with your context and correct or withdraw the finding in public.
+Open an issue in this repository (template "Correction to a flagged paper"), or write to the maintainer. We will
+re-run the check with your context and correct or withdraw the finding in public. Details:
+[`DISCLAIMER.md`](DISCLAIMER.md#if-this-flags-your-paper).
 
-## Section A - 33 findings confirmed by our own second automated pass (not verified by a human)
+## Section A - 33 findings confirmed by our own second automated pass
 
 Counts: group 1: 11, group 2: 10, group 3: 8, group 4: 4.
 
 ### Group 1 - recomputed, changes a reported result, and passed the v2 judge and blind gate (11)
 
-The strongest automated bar. The second pass recomputed the number from the paper's own numbers. In its reading, a reported result changes. The finding also stayed in tier A under the stricter v2 judge and the blind second gate. This is still not a human check.
+The strongest automated bar. The second pass recomputed the number from the paper's own numbers. In its reading, a reported result changes. The finding also stayed in tier A under the stricter v2 judge and the blind second gate.
 
 #### F01 · PMC12070029 · Nurs Open (2025)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC12070029](https://pmc.ncbi.nlm.nih.gov/articles/PMC12070029/) · DOI [10.1002/nop2.2204](https://doi.org/10.1002/nop2.2204) · *Nurs Open* (2025) · field: nursing_public_health · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q5358133c-2`
@@ -93,7 +87,7 @@ The strongest automated bar. The second pass recomputed the number from the pape
 
   > "this relationship was not significant in the instrumental dimension (r = 0.197, p = 0.081)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -136,7 +130,7 @@ n 110 r=0.197 (2.088205599878859, 0.03913054330820811)
 
 #### F02 · PMC12565232 · Insects (2025)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC12565232](https://pmc.ncbi.nlm.nih.gov/articles/PMC12565232/) · DOI [10.3390/insects16101013](https://doi.org/10.3390/insects16101013) · *Insects* (2025) · field: ecology_environment · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qbbf35f1b-1`
@@ -161,7 +155,7 @@ n 110 r=0.197 (2.088205599878859, 0.03913054330820811)
 
   > "reaching a 2.4-fold higher level under high light (5000 lux: 12.165 ± 0.42 μmol/g) compared to low light (200 lux: 3.885 ± 0.21 μmol/g; p < 0.001)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -191,7 +185,7 @@ fold bounds 3.130742504182216 3.1318058952246104
 
 #### F03 · PMC12696897 · BMC Nurs (2025)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC12696897](https://pmc.ncbi.nlm.nih.gov/articles/PMC12696897/) · DOI [10.1186/s12912-025-03932-x](https://doi.org/10.1186/s12912-025-03932-x) · *BMC Nurs* (2025) · field: nursing_public_health · licence: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 - **Run id**: `R1-q9130c5da-1`
@@ -216,7 +210,7 @@ fold bounds 3.130742504182216 3.1318058952246104
 
   > "Humanistic Care Training |  |  |  / Yes | 3.331(0.505)a | 5.603(< 0.001**)a | 1.934(0.124)a"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -257,7 +251,7 @@ t 1.934 df 22 p2 0.06608
 
 #### F04 · PMC13136085 · Front Sports Act Living (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13136085](https://pmc.ncbi.nlm.nih.gov/articles/PMC13136085/) · DOI [10.3389/fspor.2026.1806303](https://doi.org/10.3389/fspor.2026.1806303) · *Front Sports Act Living* (2026) · field: sports_exercise · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q21025977-3`
@@ -286,7 +280,7 @@ t 1.934 df 22 p2 0.06608
 
   > "No statistically significant sex differences were observed in RHR, HRmax, or HRR (all p > 0.05)."
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -325,7 +319,7 @@ HRR min diff bound (7.83664800164918, 1508.8799522741704, 8.673048312038116e-15)
 
 #### F05 · PMC13168142 · Front Pharmacol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13168142](https://pmc.ncbi.nlm.nih.gov/articles/PMC13168142/) · DOI [10.3389/fphar.2026.1801073](https://doi.org/10.3389/fphar.2026.1801073) · *Front Pharmacol* (2026) · field: wetlab_biology · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q8022901e-2`
@@ -350,7 +344,7 @@ HRR min diff bound (7.83664800164918, 1508.8799522741704, 8.673048312038116e-15)
 
   > "total distance traveled [F (3,36) = 2.78, p < 0.01; Figure 1C], and swimming velocity [F (3,36) = 3.14, p < 0.01; Figure 1D]"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -384,7 +378,7 @@ F 7.85 p 0.000371235243250844
 
 #### F06 · PMC13300515 · Insects (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13300515](https://pmc.ncbi.nlm.nih.gov/articles/PMC13300515/) · *Insects* (2026) · field: ecology_environment · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qd54b31d2-1`
@@ -405,7 +399,7 @@ F 7.85 p 0.000371235243250844
 
   > "Simpson index (R2 = 0.17, F(2,4) =0.40, p < 0.01)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -439,7 +433,7 @@ Fcrit_p0.01_check p(18) 0.01
 
 #### F07 · PMC13389739 · Front Vet Sci (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13389739](https://pmc.ncbi.nlm.nih.gov/articles/PMC13389739/) · DOI [10.3389/fvets.2026.1839557](https://doi.org/10.3389/fvets.2026.1839557) · *Front Vet Sci* (2026) · field: agri_food_vet · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qa620ee35-1`
@@ -464,7 +458,7 @@ Fcrit_p0.01_check p(18) 0.01
 
   > "The data are presented as the mean ± standard deviation (n = 6/group)."
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -503,7 +497,7 @@ paper p DM21 0.980 diet 0.979
 
 #### F08 · PMC13451341 · Nurs Open (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13451341](https://pmc.ncbi.nlm.nih.gov/articles/PMC13451341/) · DOI [10.1002/nop2.70731](https://doi.org/10.1002/nop2.70731) · *Nurs Open* (2026) · field: nursing_public_health · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qbd0e9f5a-1`
@@ -528,7 +522,7 @@ paper p DM21 0.980 diet 0.979
 
   > "spouses reported higher needs than children (4.28 ± 0.76 vs. 3.92 ± 0.95, F = 3.17, p = 0.045, η / 2 = 0.04), although this difference did not reach statistical significance"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -577,7 +571,7 @@ eta2 range 0.04537375564675308 0.0513255728604794
 
 #### F09 · PMC13607948 · Insects (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13607948](https://pmc.ncbi.nlm.nih.gov/articles/PMC13607948/) · DOI [10.3390/insects17090974](https://doi.org/10.3390/insects17090974) · *Insects* (2026) · field: ecology_environment · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qd89f8d28-1`
@@ -614,7 +608,7 @@ eta2 range 0.04537375564675308 0.0513255728604794
 
   > "Initial egg densities showed no significant differences among treatment groups at hour 0 (F2,42 = 0.88, p = 0.422)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -665,7 +659,7 @@ MSB 671.1500000000001 MSW needed for F=0.88 762.6704545454546 implied pooled SD 
 
 #### F10 · PMC13631009 · Front Pharmacol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13631009](https://pmc.ncbi.nlm.nih.gov/articles/PMC13631009/) · DOI [10.3389/fphar.2026.1848763](https://doi.org/10.3389/fphar.2026.1848763) · *Front Pharmacol* (2026) · field: wetlab_biology · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q59bdd494-1`
@@ -690,7 +684,7 @@ MSB 671.1500000000001 MSW needed for F=0.88 762.6704545454546 implied pooled SD 
 
   > "Although most participants expressed positive attitudes, many relied on social media"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -723,7 +717,7 @@ pos+neu share 71.3
 
 #### F11 · PMC13763532 · Foods (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13763532](https://pmc.ncbi.nlm.nih.gov/articles/PMC13763532/) · DOI [10.3390/foods15213998](https://doi.org/10.3390/foods15213998) · *Foods* (2026) · field: agri_food_vet · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q2539bf5f-3`
@@ -748,7 +742,7 @@ pos+neu share 71.3
 
   > "Data are expressed as the mean ± standard deviation (SD) of three independent replicates."
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -788,7 +782,7 @@ The second pass recomputed the number, and in its reading a reported result chan
 
 #### F12 · PMC12295857 · Insects (2025)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC12295857](https://pmc.ncbi.nlm.nih.gov/articles/PMC12295857/) · DOI [10.3390/insects16070732](https://doi.org/10.3390/insects16070732) · *Insects* (2025) · field: ecology_environment · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q78b8dfda-3`
@@ -809,7 +803,7 @@ The second pass recomputed the number, and in its reading a reported result chan
 
   > "(χ2 = 5.86, df = 1, p = 0.119)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -837,7 +831,7 @@ chi2 for p=0.119 2.430433314079
 
 #### F13 · PMC12797519 · BMC Nurs (2025)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC12797519](https://pmc.ncbi.nlm.nih.gov/articles/PMC12797519/) · DOI [10.1186/s12912-025-04180-9](https://doi.org/10.1186/s12912-025-04180-9) · *BMC Nurs* (2025) · field: nursing_public_health · licence: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 - **Run id**: `R1-qa4b8bf75-1`
@@ -886,7 +880,7 @@ chi2 for p=0.119 2.430433314079
 
   > "Technical Institute | 36 | 95.875"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -911,7 +905,7 @@ other T3 totals 235 235 235
 
 #### F14 · PMC12821694 · J Funct Morphol Kinesiol (2025)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC12821694](https://pmc.ncbi.nlm.nih.gov/articles/PMC12821694/) · DOI [10.3390/jfmk11010003](https://doi.org/10.3390/jfmk11010003) · *J Funct Morphol Kinesiol* (2025) · field: sports_exercise · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q1f88b004-1`
@@ -944,7 +938,7 @@ other T3 totals 235 235 235
 
   > "males averaging a deficit of approximately 2981 kcal and females with an approximate deficit of 2228 kcal per day"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -976,7 +970,7 @@ ratio passage/3.1 male 2.208148148148148 female 2.285128205128205
 
 #### F15 · PMC13003745 · BMC Sports Sci Med Rehabil (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13003745](https://pmc.ncbi.nlm.nih.gov/articles/PMC13003745/) · DOI [10.1186/s13102-026-01545-8](https://doi.org/10.1186/s13102-026-01545-8) · *BMC Sports Sci Med Rehabil* (2026) · field: sports_exercise · licence: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 - **Run id**: `R1-qcf65dfaa-1`
@@ -1005,7 +999,7 @@ ratio passage/3.1 male 2.208148148148148 female 2.285128205128205
 
   > "significant improvements in upper extremity stabilization, as indicated by the Closed Kinetic Chain Upper Extremity Stability Test (CKCUEST) in the experimental group (p < 0.001)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -1043,7 +1037,7 @@ interaction F=48.495 df(1,25) p 2.67288860443337e-7
 
 #### F16 · PMC13168142 · Front Pharmacol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13168142](https://pmc.ncbi.nlm.nih.gov/articles/PMC13168142/) · DOI [10.3389/fphar.2026.1801073](https://doi.org/10.3389/fphar.2026.1801073) · *Front Pharmacol* (2026) · field: wetlab_biology · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q8022901e-4`
@@ -1068,7 +1062,7 @@ interaction F=48.495 df(1,25) p 2.67288860443337e-7
 
   > "spontaneous alternation [F (3, 36) = 3.22, p < 0.01] (Figure 2A), time spent in each arm [F (3, 36) = 2.85, p < 0.01]"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -1107,7 +1101,7 @@ F 7.71 p 0.000419656
 
 #### F17 · PMC13291109 · Front Pharmacol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13291109](https://pmc.ncbi.nlm.nih.gov/articles/PMC13291109/) · DOI [10.3389/fphar.2026.1776775](https://doi.org/10.3389/fphar.2026.1776775) · *Front Pharmacol* (2026) · field: wetlab_biology · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q7a98d23d-1`
@@ -1140,7 +1134,7 @@ F 7.71 p 0.000419656
 
   > "clinical remission rate of 66.34% (67/101)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -1210,7 +1204,7 @@ for a in range(0,25):
 
 #### F18 · PMC13513319 · Insects (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13513319](https://pmc.ncbi.nlm.nih.gov/articles/PMC13513319/) · DOI [10.3390/insects17080828](https://doi.org/10.3390/insects17080828) · *Insects* (2026) · field: ecology_environment · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q9f09ff6c-2`
@@ -1235,7 +1229,7 @@ for a in range(0,25):
 
   > "Larval Cd concentration reached 38.07 ± 3.22 mg/kg in the Cd treatment group, markedly higher than the control level of 0.08 ± 0.01 mg/kg (Table 1, p < 0.05)."
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -1276,7 +1270,7 @@ paper p < 0.05
 
 #### F19 · PMC13587494 · BMC Sports Sci Med Rehabil (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13587494](https://pmc.ncbi.nlm.nih.gov/articles/PMC13587494/) · DOI [10.1186/s13102-026-01816-4](https://doi.org/10.1186/s13102-026-01816-4) · *BMC Sports Sci Med Rehabil* (2026) · field: sports_exercise · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q34dcb204-2`
@@ -1301,7 +1295,7 @@ paper p < 0.05
 
   > "BMI (kg/m2) | 24.77 | 1.35 | 23.73 | 0.63 | 0.089"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -1368,7 +1362,7 @@ bmi 10 9 paper 0.089 student p 0.05006
 
 #### F20 · PMC13637671 · Front Public Health (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13637671](https://pmc.ncbi.nlm.nih.gov/articles/PMC13637671/) · DOI [10.3389/fpubh.2026.1927794](https://doi.org/10.3389/fpubh.2026.1927794) · *Front Public Health* (2026) · field: nursing_public_health · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q33e96d6d-5`
@@ -1397,7 +1391,7 @@ bmi 10 9 paper 0.089 student p 0.05006
 
   > "Post hoc comparisons for Q11 revealed a statistically significant difference only between students and members of the general public"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -1473,7 +1467,7 @@ t from pooled MSW 1.70824276979368
 
 #### F21 · PMC13731344 · Front Pharmacol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13731344](https://pmc.ncbi.nlm.nih.gov/articles/PMC13731344/) · DOI [10.3389/fphar.2026.1965339](https://doi.org/10.3389/fphar.2026.1965339) · *Front Pharmacol* (2026) · field: wetlab_biology · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qd372f837-2`
@@ -1502,7 +1496,7 @@ t from pooled MSW 1.70824276979368
 
   > "A total of 684 prescriptions (19.68%, 684/3476) were identified with 1404 pDDIs"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -1539,7 +1533,7 @@ The second pass did not recompute a statistic. Its code only compares statements
 
 #### F22 · PMC11670870 · Nurs Open (2025)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC11670870](https://pmc.ncbi.nlm.nih.gov/articles/PMC11670870/) · DOI [10.1002/nop2.70099](https://doi.org/10.1002/nop2.70099) · *Nurs Open* (2025) · field: nursing_public_health · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q54daeea1-2`
@@ -1568,7 +1562,7 @@ The second pass did not recompute a statistic. Its code only compares statements
 
   > "patients were more likely to overestimate their falls risk if they used anticoagulant medication and if their highest education level was less than or equal year 11."
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -1604,7 +1598,7 @@ Table5 rho signs: anticoag 0.33, edu<11 -0.32
 
 #### F23 · PMC12648369 · Glob Chang Biol (2025)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC12648369](https://pmc.ncbi.nlm.nih.gov/articles/PMC12648369/) · DOI [10.1111/gcb.70623](https://doi.org/10.1111/gcb.70623) · *Glob Chang Biol* (2025) · field: ecology_environment · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q30ebd430-3`
@@ -1625,7 +1619,7 @@ Table5 rho signs: anticoag 0.33, edu<11 -0.32
 
   > "taxonomic and functional richness, along with total abundance, are increasing more rapidly in wintering compared to breeding communities"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -1652,7 +1646,7 @@ FEve p = 0.132 significant at 0.05: False
 
 #### F24 · PMC12975460 · Front Vet Sci (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC12975460](https://pmc.ncbi.nlm.nih.gov/articles/PMC12975460/) · DOI [10.3389/fvets.2026.1692050](https://doi.org/10.3389/fvets.2026.1692050) · *Front Vet Sci* (2026) · field: agri_food_vet · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q22b450dc-1`
@@ -1681,7 +1675,7 @@ FEve p = 0.132 significant at 0.05: False
 
   > "Groups A and B showed CK normalization by T3, suggesting reversible damage after short compression"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -1712,7 +1706,7 @@ Claim consistent: False
 
 #### F25 · PMC13180824 · Front Pharmacol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13180824](https://pmc.ncbi.nlm.nih.gov/articles/PMC13180824/) · DOI [10.3389/fphar.2026.1761852](https://doi.org/10.3389/fphar.2026.1761852) · *Front Pharmacol* (2026) · field: wetlab_biology · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qd258bbf0-1`
@@ -1737,7 +1731,7 @@ Claim consistent: False
 
   > "DAS28-CRP increased significantly from baseline to Week 4 (0.30 ± 0.10, P = 0.004)."
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -1773,7 +1767,7 @@ z p 0.00269979606326019
 
 #### F26 · PMC13295250 · Animals (Basel) (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13295250](https://pmc.ncbi.nlm.nih.gov/articles/PMC13295250/) · DOI [10.3390/ani16121847](https://doi.org/10.3390/ani16121847) · *Animals (Basel)* (2026) · field: agri_food_vet · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qa2d7bb65-1`
@@ -1794,7 +1788,7 @@ z p 0.00269979606326019
 
   > "Mercury (Hg) at the inner-bay margin (NW) surpassed the Class I standard (0.05 μg/L)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -1818,7 +1812,7 @@ inner_bay_Hg 0.06 ClassI_std 0.05 exceeds True ratio 1.2
 
 #### F27 · PMC13587494 · BMC Sports Sci Med Rehabil (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13587494](https://pmc.ncbi.nlm.nih.gov/articles/PMC13587494/) · DOI [10.1186/s13102-026-01816-4](https://doi.org/10.1186/s13102-026-01816-4) · *BMC Sports Sci Med Rehabil* (2026) · field: sports_exercise · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q34dcb204-1`
@@ -1843,7 +1837,7 @@ inner_bay_Hg 0.06 ClassI_std 0.05 exceeds True ratio 1.2
 
   > "IWU would lead to an increase in the pressure-generating capacity of the inspiratory muscles and consequently result in improved 1RM performance, was confirmed"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -1876,7 +1870,7 @@ MIP pct IWU 7.205067300079183 CG 6.322018062908755
 
 #### F28 · PMC13608439 · J Funct Morphol Kinesiol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13608439](https://pmc.ncbi.nlm.nih.gov/articles/PMC13608439/) · DOI [10.3390/jfmk11030358](https://doi.org/10.3390/jfmk11030358) · *J Funct Morphol Kinesiol* (2026) · field: sports_exercise · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qcb80f115-2`
@@ -1901,7 +1895,7 @@ MIP pct IWU 7.205067300079183 CG 6.322018062908755
 
   > "The analysis of the variations revealed statistically significant differences between the groups in the Satisfaction with Life variable"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -1927,7 +1921,7 @@ SWL_post H 9.037 paper_p 0.011 recomputed_p 0.01091 significant_at_0.05 True
 
 #### F29 · PMC13682915 · Ecol Evol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13682915](https://pmc.ncbi.nlm.nih.gov/articles/PMC13682915/) · DOI [10.1002/ece3.74556](https://doi.org/10.1002/ece3.74556) · *Ecol Evol* (2026) · field: ecology_environment · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q55558b43-2`
@@ -1952,7 +1946,7 @@ SWL_post H 9.037 paper_p 0.011 recomputed_p 0.01091 significant_at_0.05 True
 
   > "and its significant link to beta diversity turnover"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -1984,7 +1978,7 @@ The second pass found the same possible discrepancy, but in its reading no repor
 
 #### F30 · PMC13079375 · Front Sports Act Living (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13079375](https://pmc.ncbi.nlm.nih.gov/articles/PMC13079375/) · DOI [10.3389/fspor.2026.1770227](https://doi.org/10.3389/fspor.2026.1770227) · *Front Sports Act Living* (2026) · field: sports_exercise · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q2c278b5f-3`
@@ -2005,7 +1999,7 @@ The second pass found the same possible discrepancy, but in its reading no repor
 
   > "Self-efficacy | 116 | 2.30 | 5.00 | 3.87 | 0.54"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-opus-5-5): tier A, with a logged code check
@@ -2038,7 +2032,7 @@ R2 from t: R=0.65 R2 0.42250000000000004
 
 #### F31 · PMC13149103 · Front Pharmacol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13149103](https://pmc.ncbi.nlm.nih.gov/articles/PMC13149103/) · DOI [10.3389/fphar.2026.1745737](https://doi.org/10.3389/fphar.2026.1745737) · *Front Pharmacol* (2026) · field: wetlab_biology · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-qcb676891-1`
@@ -2063,7 +2057,7 @@ R2 from t: R=0.65 R2 0.42250000000000004
 
   > "None loading dose | 94 (34.9)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -2097,7 +2091,7 @@ check_sex 67.97 32.03
 
 #### F32 · PMC13534047 · Front Public Health (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13534047](https://pmc.ncbi.nlm.nih.gov/articles/PMC13534047/) · DOI [10.3389/fpubh.2026.1926848](https://doi.org/10.3389/fpubh.2026.1926848) · *Front Public Health* (2026) · field: nursing_public_health · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q321101e6-3`
@@ -2118,7 +2112,7 @@ check_sex 67.97 32.03
 
   > "Among the 323 healthcare workers who reported experiencing violence"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -2155,7 +2149,7 @@ PCL-5 n 305 vs exposed 323 diff 18
 
 #### F33 · PMC13585511 · Front Pharmacol (2026)
 
-**Status: unverified. Flagged for checking by an automated pipeline. No human has checked it. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified.**
 
 - **Paper**: [PMC13585511](https://pmc.ncbi.nlm.nih.gov/articles/PMC13585511/) · DOI [10.3389/fphar.2026.1918438](https://doi.org/10.3389/fphar.2026.1918438) · *Front Pharmacol* (2026) · field: wetlab_biology · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q64b528a1-3`
@@ -2180,7 +2174,7 @@ PCL-5 n 305 vs exposed 323 diff 18
 
   > "Male (n = 29) | Female (n = 32)"
 
-**Automatic checks** (all automatic, none by a human):
+**Automatic checks:**
 
 - Evidence gate (program): passed
 - First judge (model, claude-fable-5-2): tier A, with a logged code check
@@ -2218,11 +2212,11 @@ female fatigue 1/32 pct 3.12 Fisher 1.0
 ## Section B - Not confirmed by our own second pass (7 flags)
 
 > These 7 flags came from the first pass. **Our own second pass did not confirm them**: it rejected 3 and could not decide on 4.
-> No human has checked them either. We list them so that the random sample of 40 is complete. Do not read them as confirmed findings.
+> We list them so that the random sample of 40 is complete. Do not read them as confirmed findings.
 
 #### N1 · PMC12807936 · Front Vet Sci (2025) - not confirmed: rejected (the second pass tested a different comparison)
 
-**Status: not confirmed by our own second pass. Not verified by a human. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified; not confirmed by our own second pass.**
 
 - **Paper**: [PMC12807936](https://pmc.ncbi.nlm.nih.gov/articles/PMC12807936/) · DOI [10.3389/fvets.2025.1707434](https://doi.org/10.3389/fvets.2025.1707434) · *Front Vet Sci* (2025) · field: agri_food_vet · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q28cc1bbc-1`
@@ -2236,7 +2230,7 @@ Passage (quotation; source: PMC12807936, CC BY 4.0):
 
 #### N2 · PMC12807936 · Front Vet Sci (2025) - not confirmed: rejected (a valid different denominator)
 
-**Status: not confirmed by our own second pass. Not verified by a human. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified; not confirmed by our own second pass.**
 
 - **Paper**: [PMC12807936](https://pmc.ncbi.nlm.nih.gov/articles/PMC12807936/) · DOI [10.3389/fvets.2025.1707434](https://doi.org/10.3389/fvets.2025.1707434) · *Front Vet Sci* (2025) · field: agri_food_vet · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q28cc1bbc-6`
@@ -2250,7 +2244,7 @@ Passage (quotation; source: PMC12807936, CC BY 4.0):
 
 #### N3 · PMC12797519 · BMC Nurs (2025) - not confirmed: rejected (a second symptom of another finding)
 
-**Status: not confirmed by our own second pass. Not verified by a human. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified; not confirmed by our own second pass.**
 
 - **Paper**: [PMC12797519](https://pmc.ncbi.nlm.nih.gov/articles/PMC12797519/) · DOI [10.1186/s12912-025-04180-9](https://doi.org/10.1186/s12912-025-04180-9) · *BMC Nurs* (2025) · field: nursing_public_health · licence: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 - **Run id**: `R1-qa4b8bf75-3`
@@ -2264,7 +2258,7 @@ Passage (quotation; source: PMC12797519, CC BY-NC-ND 4.0):
 
 #### N4 · PMC13292676 · Poult Sci (2026) - not confirmed: unresolved (the wording has two readings)
 
-**Status: not confirmed by our own second pass. Not verified by a human. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified; not confirmed by our own second pass.**
 
 - **Paper**: [PMC13292676](https://pmc.ncbi.nlm.nih.gov/articles/PMC13292676/) · DOI [10.1016/j.psj.2026.107253](https://doi.org/10.1016/j.psj.2026.107253) · *Poult Sci* (2026) · field: agri_food_vet · licence: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 - **Run id**: `R1-q40b15963-5`
@@ -2278,7 +2272,7 @@ Passage (quotation; source: PMC13292676, CC BY-NC-ND 4.0):
 
 #### N5 · PMC13359537 · Animals (Basel) (2026) - not confirmed: unresolved (the unit of analysis is not stated)
 
-**Status: not confirmed by our own second pass. Not verified by a human. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified; not confirmed by our own second pass.**
 
 - **Paper**: [PMC13359537](https://pmc.ncbi.nlm.nih.gov/articles/PMC13359537/) · DOI [10.3390/ani16132060](https://doi.org/10.3390/ani16132060) · *Animals (Basel)* (2026) · field: agri_food_vet · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q756465d8-2`
@@ -2292,7 +2286,7 @@ Passage (quotation; source: PMC13359537, CC BY 4.0):
 
 #### N6 · PMC13052302 · Ecol Evol (2026) - not confirmed: unresolved (SD or SE is not stated)
 
-**Status: not confirmed by our own second pass. Not verified by a human. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified; not confirmed by our own second pass.**
 
 - **Paper**: [PMC13052302](https://pmc.ncbi.nlm.nih.gov/articles/PMC13052302/) · DOI [10.1002/ece3.73247](https://doi.org/10.1002/ece3.73247) · *Ecol Evol* (2026) · field: ecology_environment · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q76e7b809-1`
@@ -2306,7 +2300,7 @@ Passage (quotation; source: PMC13052302, CC BY 4.0):
 
 #### N7 · PMC13189902 · Front Sports Act Living (2026) - not confirmed: unresolved (two claims in one flag; only the second one reproduced)
 
-**Status: not confirmed by our own second pass. Not verified by a human. In the process of verification. Not a claim that the paper is wrong.**
+**Status: automated, unverified; not confirmed by our own second pass.**
 
 - **Paper**: [PMC13189902](https://pmc.ncbi.nlm.nih.gov/articles/PMC13189902/) · DOI [10.3389/fspor.2026.1748973](https://doi.org/10.3389/fspor.2026.1748973) · *Front Sports Act Living* (2026) · field: sports_exercise · licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Run id**: `R1-q18d8b5c4-1`
