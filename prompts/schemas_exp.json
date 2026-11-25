@@ -1,0 +1,302 @@
+{
+ "skim_impact": {
+  "type": "object",
+  "properties": {
+   "headline": {
+    "type": "string"
+   },
+   "problems": {
+    "type": "array",
+    "maxItems": 5,
+    "items": {
+     "type": "object",
+     "properties": {
+      "title": {
+       "type": "string"
+      },
+      "kind_of_error": {
+       "type": "string",
+       "enum": [
+        "statistics",
+        "units",
+        "math",
+        "numbers",
+        "sequence_id",
+        "overclaim",
+        "other"
+       ]
+      },
+      "location": {
+       "type": "string"
+      },
+      "severity": {
+       "type": "string",
+       "enum": [
+        "major",
+        "moderate",
+        "minor"
+       ]
+      },
+      "kind": {
+       "type": "string",
+       "enum": [
+        "error",
+        "debatable"
+       ]
+      },
+      "confidence": {
+       "type": "string",
+       "enum": [
+        "high",
+        "medium",
+        "low"
+       ]
+      },
+      "quote": {
+       "type": "string"
+      },
+      "claimed": {
+       "type": "string"
+      },
+      "corrected": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "reasoning": {
+       "type": "string"
+      },
+      "impact": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "title",
+      "kind_of_error",
+      "location",
+      "severity",
+      "kind",
+      "confidence",
+      "quote",
+      "claimed",
+      "corrected",
+      "reasoning",
+      "impact"
+     ]
+    }
+   },
+   "promote": {
+    "type": "integer",
+    "minimum": 0,
+    "maximum": 3
+   }
+  },
+  "required": [
+   "headline",
+   "problems",
+   "promote"
+  ]
+ },
+ "judge": {
+  "type": "object",
+  "properties": {
+   "results": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string"
+      },
+      "innocent_explanation": {
+       "type": "string"
+      },
+      "impact": {
+       "type": "string"
+      },
+      "calculations": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "expression": {
+          "type": "string"
+         },
+         "result": {
+          "type": "string"
+         },
+         "meaning": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "expression",
+         "result",
+         "meaning"
+        ]
+       }
+      },
+      "checks": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "code": {
+          "type": "string"
+         },
+         "output": {
+          "type": "string"
+         },
+         "shows": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "code",
+         "output",
+         "shows"
+        ]
+       }
+      },
+      "code_confirms": {
+       "type": "boolean"
+      },
+      "tier": {
+       "type": "string",
+       "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      "statement": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "id",
+      "innocent_explanation",
+      "impact",
+      "calculations",
+      "checks",
+      "code_confirms",
+      "tier",
+      "statement"
+     ]
+    }
+   }
+  },
+  "required": [
+   "results"
+  ]
+ },
+ "match": {
+  "type": "object",
+  "properties": {
+   "issues": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "issue": {
+       "type": "string"
+      },
+      "key_ids": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      }
+     },
+     "required": [
+      "issue",
+      "key_ids"
+     ]
+    }
+   },
+   "matches": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "flag_id": {
+       "type": "string"
+      },
+      "issue": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "confidence": {
+       "type": "string",
+       "enum": [
+        "high",
+        "medium",
+        "low"
+       ]
+      }
+     },
+     "required": [
+      "flag_id",
+      "issue",
+      "confidence"
+     ]
+    }
+   }
+  },
+  "required": [
+   "issues",
+   "matches"
+  ]
+ },
+ "plant": {
+  "type": "object",
+  "properties": {
+   "plants": {
+    "type": "array",
+    "minItems": 2,
+    "maxItems": 2,
+    "items": {
+     "type": "object",
+     "properties": {
+      "old": {
+       "type": "string"
+      },
+      "new": {
+       "type": "string"
+      },
+      "kind_of_error": {
+       "type": "string",
+       "enum": [
+        "statistics",
+        "units",
+        "math",
+        "numbers",
+        "overclaim"
+       ]
+      },
+      "contradicts": {
+       "type": "string"
+      },
+      "description": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "old",
+      "new",
+      "kind_of_error",
+      "contradicts",
+      "description"
+     ]
+    }
+   }
+  },
+  "required": [
+   "plants"
+  ]
+ }
+}

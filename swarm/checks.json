@@ -1,0 +1,30 @@
+{
+ "stat_recompute": {
+  "description": "Recompute the p-value of every reported test statistic (t, F, r, chi-square, z, also b/SE in regressions) from the statistic and its degrees of freedom. Flag a reported p that no value in the rounding interval of the statistic can give, and above all a p on the other side of .05 (decision error). Allow one-tailed tests only when the paper says so for that test, and allow stated corrections (Bonferroni, Greenhouse-Geisser).",
+  "angles": ["Go through the Results text in order, every test.", "Start with the tables of test statistics, then the text.", "Start with the tests behind the main conclusions in the Abstract and Discussion."]
+ },
+ "grim_grimmer": {
+  "description": "Means and SDs of integer-valued measures (single Likert items, counts, ages in whole years, test scores out of a fixed maximum) with a stated n: GRIM (can a mean of n integers have this value?), GRIMMER (is the SD possible for that mean and n?), and range checks (a mean outside the scale range, an SD larger than the scale allows). Multi-item scale means need the number of items: GRIM then applies to n x items.",
+  "angles": ["Start with the descriptive statistics table.", "Start with the Participants / Sample section and the demographics.", "Look for item-level means and percentages of integer responses."]
+ },
+ "df_sample": {
+  "description": "Degrees of freedom against the stated sample sizes and design: t(df) and F(df1, df2) must fit n minus groups or the number of predictors, within-subject designs, and stated exclusions. Participant flow: recruited minus excluded must equal analysed; group ns must add to the total; percentages of the sample must fit the counts.",
+  "angles": ["Rebuild the participant flow from the Method section first, then check every df.", "Check every df in the Results against the n of the analysis it belongs to.", "Check group sizes, exclusions and percentages in tables."]
+ },
+ "effect_size_ci": {
+  "description": "Recompute effect sizes from the reported test statistics and n (Cohen's d from t and the group ns, partial eta-squared from F and the dfs, r from t) and compare with the reported values. Check that each confidence interval contains its point estimate, that the CI and the p-value agree (a 95% CI that excludes 0 needs p < .05), that SE and SD are not swapped, and that b, SE and t or z of a regression agree (t = b / SE).",
+  "angles": ["Start with effect sizes reported next to t and F tests.", "Start with regression and mediation tables (b, SE, t, CI).", "Start with confidence intervals anywhere in the paper."]
+ },
+ "text_table": {
+  "description": "The same number in the Abstract, the Results text, the tables and the Discussion must agree: means, SDs, ns, percentages, correlations, test statistics. Totals must be the sums of their parts and percentages must follow from counts.",
+  "angles": ["Take every number in the Abstract and find it again in the body.", "Take each table and find its numbers in the text.", "Check totals, sums and percentages in every table."]
+ },
+ "claim_result": {
+  "description": "Statements about the results against the paper's own statistics: 'significant' or 'no difference' claims that the reported p or CI contradict, an interaction claimed from two separate simple tests without a test of the interaction, a direction of an effect that contradicts the reported means, a claimed correction for multiple comparisons that the reported thresholds do not follow. Only claims that the paper's own numbers contradict, not strong wording.",
+  "angles": ["Check each sentence of the Abstract against the Results.", "Check each 'significant' and 'non-significant' claim in the Results.", "Check the Discussion's summary of the findings against the Results."]
+ },
+ "open": {
+  "description": "Free exploration: find any other kind of internal, checkable, quantitative error that the other check types (stat_recompute, grim_grimmer, df_sample, effect_size_ci, text_table, claim_result) do not cover. Examples: reliability coefficients that cannot be right, a power analysis whose stated n does not follow from its own inputs, impossible correlation matrices, a mediation effect that is not a times b, a reported model fit index that contradicts its chi-square and df. If you find a new kind of error that could exist in other papers too, propose it as a global lead.",
+  "angles": ["Look at the power analysis, the reliability and the model-fit numbers.", "Look at correlation matrices and mediation or SEM results.", "Look wherever the paper does arithmetic that the other check types skip."]
+ }
+}

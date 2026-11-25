@@ -1,0 +1,116 @@
+{
+ "judge_pool": {
+  "type": "object",
+  "properties": {
+   "results": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string"
+      },
+      "innocent_explanation": {
+       "type": "string"
+      },
+      "impact": {
+       "type": "string"
+      },
+      "calculations": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "expression": {
+          "type": "string"
+         },
+         "result": {
+          "type": "string"
+         },
+         "meaning": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "expression",
+         "result",
+         "meaning"
+        ]
+       }
+      },
+      "checks": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "code": {
+          "type": "string"
+         },
+         "output": {
+          "type": "string"
+         },
+         "shows": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "code",
+         "output",
+         "shows"
+        ]
+       }
+      },
+      "code_confirms": {
+       "type": "boolean"
+      },
+      "tier": {
+       "type": "string",
+       "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      "statement": {
+       "type": "string"
+      },
+      "issue": {
+       "type": "integer"
+      },
+      "error_type": {
+       "type": "string",
+       "enum": [
+        "p_value",
+        "grim",
+        "df_sample",
+        "effect_size_ci",
+        "text_table",
+        "claim_result",
+        "other"
+       ]
+      },
+      "error_type_detail": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "id",
+      "innocent_explanation",
+      "impact",
+      "calculations",
+      "checks",
+      "code_confirms",
+      "tier",
+      "statement",
+      "issue",
+      "error_type"
+     ]
+    }
+   }
+  },
+  "required": [
+   "results"
+  ]
+ }
+}

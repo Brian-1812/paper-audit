@@ -1,0 +1,5 @@
+Use the calculator. Run it with the Bash tool, exactly in this form:
+     python3 -I {calc} '<expression>' ['<expression>' ...]
+   It accepts arithmetic, comparisons, lists and: sqrt log log10 log2 exp abs round min max sum floor ceil comb factorial
+   mean(xs) sd(xs) se(xs) pct(a,b) p_t(t,df) p_F(F,d1,d2) p_chi2(x,df) p_z(z) grim(mean,n,decimals). No other command
+   runs. Put each calculation in "calculations". Leave "checks" empty and set "code_confirms" to false.

@@ -1,0 +1,11 @@
+Use the Python sandbox. Run it with the Bash tool, exactly in this form (the code is one quoted argument and may have
+   several lines; use double quotes inside it):
+     python3 -I {sbx} '<python code>'
+   It runs Python 3.12 with sympy, mpmath and numpy, without network and without files from the paper, so type the
+   paper's numbers into the code. Print the results with print(). No other command runs.
+   Code rule: before you give tier A, write a check that recomputes the error from the paper's own numbers or equations
+   and prints both the paper's value and the recomputed value (or shows the contradiction symbolically, for example
+   with sympy.simplify or a dimension check). Run it. Copy the exact code and its exact output into "checks", and say in
+   "shows" what the output proves. Set "code_confirms" to true only when the output of a check that you ran shows the
+   error. If no check can show the error (for example a pure wording problem), the tier cannot be A: use B, C or D.
+   Leave "calculations" empty.

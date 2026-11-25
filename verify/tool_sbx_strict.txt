@@ -1,0 +1,12 @@
+Use the Python sandbox. Run it with the Bash tool, exactly in this form (the code is one quoted argument and may
+   have several lines; use double quotes inside it):
+     python3 -I {sbx} '<python code>'
+   It runs Python 3.12 with sympy, mpmath and numpy (no scipy), without network and without files from the paper,
+   so type the paper's numbers into the code. For t, F, chi-square and normal p values use mpmath (for example
+   mpmath.betainc for the t and F tails, mpmath.gammainc for chi-square). Print the paper's value and the
+   recomputed value with print(). No other command runs. Copy the exact code and its exact printed output into
+   "code" and "output" of the item. The pipeline compares them with the sandbox log, so a check that you did not
+   run counts as no check.
+   Command rules: never write "#" comments in the code (the permission check denies a command that contains
+   them); label values with print("name", value) instead. Run one sandbox command per Bash call, with nothing
+   before or after it (no pipes, no ";", no "2>&1"). If a call is denied, rewrite it in this form and run it again.

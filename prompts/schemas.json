@@ -1,0 +1,81 @@
+{
+  "skim": {
+    "type": "object",
+    "properties": {
+      "headline": {"type": "string"},
+      "problems": {
+        "type": "array",
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {"type": "string"},
+            "kind_of_error": {"type": "string", "enum": ["statistics", "units", "math", "numbers", "sequence_id", "overclaim", "other"]},
+            "location": {"type": "string"},
+            "severity": {"type": "string", "enum": ["major", "moderate", "minor"]},
+            "kind": {"type": "string", "enum": ["error", "debatable"]},
+            "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+            "quote": {"type": "string"},
+            "claimed": {"type": "string"},
+            "corrected": {"type": ["string", "null"]},
+            "reasoning": {"type": "string"}
+          },
+          "required": ["title", "kind_of_error", "location", "severity", "kind", "confidence", "quote", "claimed", "corrected", "reasoning"]
+        }
+      },
+      "promote": {"type": "integer", "minimum": 0, "maximum": 3}
+    },
+    "required": ["headline", "problems", "promote"]
+  },
+  "verify": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {"type": "string"},
+            "verdict": {"type": "string", "enum": ["CONFIRMED", "PARTLY", "NOT_CONFIRMED", "UNCHECKABLE"]},
+            "severity": {"type": "string", "enum": ["major", "moderate", "minor", "none"]},
+            "kind_of_error": {"type": "string", "enum": ["statistics", "units", "math", "numbers", "sequence_id", "overclaim", "citation", "other"]},
+            "quote_found": {"type": "boolean"},
+            "evidence": {"type": "array", "items": {"type": "object", "properties": {
+              "claim": {"type": "string"}, "finding": {"type": "string"}, "where": {"type": "string"}},
+              "required": ["claim", "finding", "where"]}},
+            "calculations": {"type": "array", "items": {"type": "object", "properties": {
+              "expression": {"type": "string"}, "result": {"type": "string"}, "meaning": {"type": "string"}},
+              "required": ["expression", "result", "meaning"]}},
+            "disclosed_by_paper": {"type": "string"},
+            "corrected": {"type": ["string", "null"]},
+            "note": {"type": "string"}
+          },
+          "required": ["id", "verdict", "severity", "kind_of_error", "quote_found", "evidence", "calculations", "disclosed_by_paper", "corrected", "note"]
+        }
+      }
+    },
+    "required": ["results"]
+  },
+  "recheck": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {"type": "string"},
+            "grade": {"type": "string", "enum": ["ERROR", "MINOR_ERROR", "NOT_ERROR", "UNCLEAR"]},
+            "innocent_explanations_checked": {"type": "string"},
+            "calculations": {"type": "array", "items": {"type": "object", "properties": {
+              "expression": {"type": "string"}, "result": {"type": "string"}, "meaning": {"type": "string"}},
+              "required": ["expression", "result", "meaning"]}},
+            "statement": {"type": "string"}
+          },
+          "required": ["id", "grade", "innocent_explanations_checked", "calculations", "statement"]
+        }
+      }
+    },
+    "required": ["results"]
+  }
+}
